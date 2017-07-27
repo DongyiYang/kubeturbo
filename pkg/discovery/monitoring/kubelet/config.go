@@ -31,7 +31,6 @@ func (c KubeletMonitorConfig) GetMonitoringSource() types.MonitoringSource {
 }
 
 // Create a new Kubelet monitor config using kubeConfig.
-// TODO Add port and https later.
 func NewKubeletMonitorConfig(kubeConfig *restclient.Config) *KubeletMonitorConfig {
 	kubeletConfig := &kubeletclient.KubeletClientConfig{
 		Port:            uint(DefaultKubeletPort),
